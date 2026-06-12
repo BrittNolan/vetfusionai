@@ -30,3 +30,6 @@ next-env.d.ts
 # local QA screenshots
 /screenshots
 /.playwright-mcp
+
+# generated single-file preview (node scripts/make-static-preview.mjs)
+/index.html
