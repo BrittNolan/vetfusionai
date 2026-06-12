@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-instrument), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-plex), "Courier New", monospace;
+
+  /* "The well-kept chart" — warm paper, pine ink, copper stamp */
+  --color-paper: #faf7f1;
+  --color-parchment: #fffdf8;
+  --color-cream: #f2ecdf;
+  --color-ink: #20302a;
+  --color-pine: #16473b;
+  --color-pine-soft: #1e5c4c;
+  --color-pine-deep: #0c2a22;
+  --color-moss: #5d7268;
+  --color-sage: #e4ebe3;
+  --color-line: #e4ddcb;
+  --color-copper: #a04a20;
+  --color-copper-soft: #d97742;
+  --color-flag: #b3442e;
+
+  --shadow-card: 0 1px 2px rgb(32 48 42 / 0.04), 0 8px 24px -12px rgb(32 48 42 / 0.12);
+  --shadow-lift: 0 1px 2px rgb(32 48 42 / 0.05), 0 24px 48px -16px rgb(32 48 42 / 0.18);
+}
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-pine);
+  color: var(--color-paper);
+}
+
+/* ---- Ruled-paper texture (used behind hero and select bands) ---- */
+.ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 35px,
+    rgb(32 48 42 / 0.055) 35px,
+    rgb(32 48 42 / 0.055) 36px
+  );
+}
+
+.ruled-fade {
+  mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+}
+
+/* ---- Entrance motion ---- */
+/* Keyframes animate the standalone translate/rotate/scale properties so they
+   land exactly on (instead of composing with) the Tailwind rotate-* utilities
+   the hero cards carry at rest. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 22px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes settle-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+    rotate: var(--settle-from, 0deg);
+    scale: 0.985;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    rotate: var(--settle-to, 0deg);
+    scale: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: var(--rise-delay, 0s);
+  }
+  .hero-settle {
+    animation: settle-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: var(--rise-delay, 0s);
+  }
+}
+
+/* Scroll-driven section reveals — progressive enhancement (Chromium).
+   Content is visible by default (no backwards fill), so printing,
+   full-page captures, and non-supporting browsers always show everything. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-timeline: view();
+      animation-range: entry 10% entry 42%;
+    }
+  }
+}
+
+@media print {
+  .reveal,
+  .hero-rise,
+  .hero-settle {
+    animation: none !important;
+  }
+}
+
+/* ---- FAQ <details> open/close animation (Chromium enhancement) ---- */
+details.faq::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.35s cubic-bezier(0.16, 1, 0.3, 1), content-visibility 0.35s allow-discrete;
+}
+
+details.faq[open]::details-content {
+  block-size: auto;
+}
+
+details.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+details.faq[open] .faq-plus {
+  transform: rotate(45deg);
+}
+
+/* ---- Stamp badge ---- */
+.stamp {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40'%3E%3Crect width='120' height='40' fill='white'/%3E%3C/svg%3E");
+}
