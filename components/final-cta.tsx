@@ -33,7 +33,7 @@ export function FinalCta() {
             Ask about the Setup Sprint
           </ButtonSecondary>
         </div>
-        <p className="reveal mt-8 font-mono text-[0.74rem] tracking-wide text-paper/50">
+        <p className="reveal mt-8 font-mono text-[0.74rem] tracking-wide text-paper/65">
           hello@vetfusionai.com · serving animal hospitals, rescues, shelters
           &amp; sanctuaries
         </p>

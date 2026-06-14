@@ -2,10 +2,10 @@ import { SectionHeading } from "@/components/ui";
 
 function MockTreatmentSheet() {
   const rows = [
-    { med: "Enrofloxacin 68 mg PO SID", due: "08:00", status: "given", tone: "text-pine" },
-    { med: "Carprofen 75 mg PO BID", due: "08:00", status: "given", tone: "text-pine" },
+    { med: "Clavamox 62.5 mg PO BID", due: "08:00", status: "given", tone: "text-pine" },
+    { med: "Robenacoxib 6 mg PO SID", due: "08:00", status: "given", tone: "text-pine" },
     { med: "Wound flush + bandage chg", due: "14:00", status: "due", tone: "text-copper" },
-    { med: "Gabapentin 100 mg PO", due: "20:00", status: "missed ✕", tone: "text-flag" },
+    { med: "Gabapentin 50 mg PO", due: "20:00", status: "missed ✕", tone: "text-flag" },
   ];
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-parchment shadow-card">

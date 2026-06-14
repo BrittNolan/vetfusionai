@@ -119,7 +119,7 @@ export function Sprint() {
                   What the sprint includes
                 </p>
                 <p className="font-mono text-[0.65rem] text-paper/60">
-                  09 items
+                  {String(included.length).padStart(2, "0")} items
                 </p>
               </div>
               <ul>

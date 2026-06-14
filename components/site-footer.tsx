@@ -49,7 +49,7 @@ export function SiteFooter() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[0.92rem] text-ink/70 transition-colors hover:text-pine"
+                    className="inline-block py-1 text-[0.92rem] text-ink/70 transition-colors hover:text-pine"
                   >
                     {l.label}
                   </Link>
@@ -67,7 +67,7 @@ export function SiteFooter() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="font-mono text-[0.85rem] text-ink/70 transition-colors hover:text-pine"
+                    className="inline-block py-1 font-mono text-[0.85rem] text-ink/70 transition-colors hover:text-pine"
                   >
                     {l.label}
                   </Link>

@@ -52,7 +52,7 @@ export function Platform() {
             <Link
               key={tool.route}
               href={tool.route}
-              className="group flex flex-col bg-paper p-7 transition-colors duration-300 hover:bg-sage/40 sm:last:col-span-2 lg:last:col-span-1"
+              className="group flex h-full flex-col bg-paper p-7 transition duration-300 hover:bg-sage/40 active:scale-[0.99] sm:last:col-span-2 lg:last:col-span-1"
             >
               <p className="font-mono text-[0.78rem] font-semibold text-copper">
                 {tool.route}
@@ -65,7 +65,7 @@ export function Platform() {
               </p>
               <span
                 aria-hidden
-                className="mt-5 inline-block text-pine transition-transform duration-300 group-hover:translate-x-1"
+                className="mt-auto inline-block pt-5 text-pine transition-transform duration-300 group-hover:translate-x-1"
               >
                 →
               </span>

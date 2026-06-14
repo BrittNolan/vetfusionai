@@ -93,11 +93,12 @@ export function Hero() {
               <Eyebrow>Setup &amp; support for animal-care teams</Eyebrow>
             </div>
             <h1
-              className="hero-rise mt-6 font-display text-[2.65rem] leading-[1.06] font-medium tracking-tight text-balance text-ink sm:text-6xl lg:text-[4.1rem]"
+              className="hero-rise mt-6 font-display text-[2.65rem] leading-[1.06] font-medium tracking-tight text-balance text-ink sm:text-6xl lg:text-[4.1rem] lg:leading-[1.1]"
               style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
             >
               AI-assisted veterinary records, SOAPs, and{" "}
-              <em className="text-pine italic">care-continuity</em> workflows.
+              <em className="whitespace-nowrap text-pine italic">care-continuity</em>{" "}
+              workflows.
             </h1>
             <p
               className="hero-rise mt-7 max-w-xl text-lg leading-relaxed text-moss"

@@ -13,7 +13,7 @@
   --color-pine: #16473b;
   --color-pine-soft: #1e5c4c;
   --color-pine-deep: #0c2a22;
-  --color-moss: #5d7268;
+  --color-moss: #54665c;
   --color-sage: #e4ebe3;
   --color-line: #e4ddcb;
   --color-copper: #a04a20;
@@ -50,6 +50,11 @@ body {
 ::selection {
   background-color: var(--color-pine);
   color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 2px;
 }
 
 /* ---- Ruled-paper texture (used behind hero and select bands) ---- */

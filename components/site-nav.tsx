@@ -52,7 +52,7 @@ export function SiteNav() {
         <div className="hidden lg:block">
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 text-[0.85rem] font-semibold text-paper transition-colors hover:bg-pine-deep"
+            className="inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 text-[0.85rem] font-semibold text-paper transition duration-200 hover:bg-pine-deep active:scale-[0.97]"
           >
             Set Up Your Records Workflow
           </Link>
@@ -60,7 +60,7 @@ export function SiteNav() {
 
         <button
           type="button"
-          className="flex size-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex size-11 flex-col items-center justify-center gap-1.5 transition active:scale-95 lg:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
@@ -99,7 +99,7 @@ export function SiteNav() {
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-5 flex items-center justify-center rounded-full bg-pine px-5 py-3 font-semibold text-paper"
+            className="mt-5 flex items-center justify-center rounded-full bg-pine px-5 py-3 font-semibold text-paper transition active:scale-[0.98]"
           >
             Set Up Your Records Workflow
           </Link>

@@ -86,7 +86,7 @@ export function ButtonPrimary({
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold transition-all duration-300 ${
+      className={`group inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold transition duration-200 active:scale-[0.97] ${
         tone === "dark"
           ? "bg-paper text-pine-deep hover:bg-cream"
           : "bg-pine text-paper shadow-card hover:bg-pine-deep hover:shadow-lift"
@@ -115,7 +115,7 @@ export function ButtonSecondary({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center gap-2.5 rounded-full border px-7 py-3.5 text-[0.95rem] font-semibold transition-all duration-300 ${
+      className={`inline-flex items-center justify-center gap-2.5 rounded-full border px-7 py-3.5 text-[0.95rem] font-semibold transition duration-200 active:scale-[0.97] ${
         tone === "dark"
           ? "border-paper/30 text-paper hover:border-paper/60 hover:bg-paper/5"
           : "border-ink/15 text-ink hover:border-pine/50 hover:text-pine"

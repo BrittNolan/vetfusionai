@@ -87,7 +87,7 @@ export function Diagnostics() {
                     <span className="w-12 font-mono text-[0.72rem] font-semibold text-ink">
                       {r.test}
                     </span>
-                    <span className="text-[0.8rem] text-ink/80">
+                    <span className="text-[0.8rem] text-ink/80 tabular-nums">
                       {r.value}{" "}
                       <span className="font-mono text-[0.62rem] text-moss">
                         ({r.ref})
