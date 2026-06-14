@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/ui";
 
 const bullets = [
+  "Records aren’t just paperwork — they’re where time, clarity, and follow-through quietly get lost.",
   "Spend less time rebuilding the chart from memory at the end of the day.",
   "Turn technician notes, doctor findings, diagnostics, and treatment updates into structured SOAP drafts faster.",
   "Reduce end-of-day record backlog and make same-day finalization more realistic.",
@@ -32,7 +33,11 @@ export function TimeSavings() {
               }
               lede="VetFusion is designed to reduce record burden while improving structure, completeness, and reviewability. Faster records should not mean thinner records. The goal is cleaner documentation, less after-hours charting, and better follow-through."
             />
-            <ul className="reveal mt-10 space-y-0">
+            <p className="reveal mt-7 font-display text-xl leading-snug text-pine/90">
+              Cleaner records in less time. Less chart backlog. Faster review.
+              More visible follow-through.
+            </p>
+            <ul className="reveal mt-8 space-y-0">
               {bullets.map((b) => (
                 <li
                   key={b}

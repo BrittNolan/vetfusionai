@@ -41,7 +41,7 @@ export function Diagnostics() {
                   <em className="text-pine italic">organized for review</em>.
                 </>
               }
-              lede="VetFusion helps organize lab results, imaging reports, and ultrasound findings into structured summaries, trend tables, review questions, and follow-up checklists — so veterinarians can review the important information faster."
+              lede="VetFusion can help organize lab results, imaging reports, and ultrasound findings into structured summaries, trend tables, review questions, and follow-up checklists — so veterinarians can review the important information faster."
             />
             <div className="reveal mt-10 grid gap-x-8 gap-y-7 sm:grid-cols-2">
               {features.map((f) => (
@@ -56,7 +56,8 @@ export function Diagnostics() {
             <p className="reveal mt-9 rounded-xl border border-line bg-paper px-5 py-4 text-[0.82rem] leading-relaxed text-moss">
               <span className="font-semibold text-ink">Boundary:</span> final
               interpretation always remains with the veterinarian, radiologist,
-              sonographer, or appropriate clinical reviewer. VetFusion prepares
+              sonographer, pathologist, or appropriate clinical reviewer.
+              VetFusion prepares
               the review — it never provides final reads.
             </p>
           </div>

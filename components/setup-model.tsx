@@ -32,7 +32,7 @@ export function SetupModel() {
                 <em className="text-pine italic">monthly subscription</em>.
               </>
             }
-            lede="VetFusion is built around implementation. The core promise is setup and practical use — not another subscription your team cannot escape."
+            lede="One setup. Launch support included. Optional renewal when your team wants more help. VetFusion is built around implementation — not another subscription your team cannot escape."
           />
           <div className="reveal shrink-0">
             <Stamp className="rotate-2 text-copper">No required monthly scribe fee</Stamp>

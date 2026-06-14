@@ -72,6 +72,15 @@ export function Boundaries() {
             </ul>
           </div>
         </div>
+
+        <p className="reveal mx-auto mt-12 max-w-3xl text-[0.85rem] leading-relaxed text-moss">
+          VetFusion provides workflow, documentation, reporting, AI-assisted
+          draft setup, and operational continuity support. Veterinary medical
+          decisions remain with licensed veterinarians and authorized clinical
+          teams. Accounting, payroll, HR, tax, and other professional decisions
+          remain with the appropriate qualified professionals and authorized
+          organizational leadership.
+        </p>
       </div>
     </section>
   );

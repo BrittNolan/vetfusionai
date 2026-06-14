@@ -15,7 +15,7 @@ const included = [
   },
   {
     title: "Prompt library",
-    body: "SOAP drafts, brief recheck SOAPs, diagnostic summaries, discharge drafts, and finalization language.",
+    body: "SOAP drafts, brief recheck SOAPs, diagnostic summaries, discharge and follow-up drafts, and finalization language.",
   },
   {
     title: "Staff training",
@@ -26,12 +26,12 @@ const included = [
     body: "A format so approved plans become clear daily instructions for the care team.",
   },
   {
-    title: "Recheck & escalation tracker",
+    title: "Recheck, callback & escalation tracker",
     body: "Rechecks, callbacks, and escalations stay visible for true follow-through.",
   },
   {
     title: "Quality-control checklist",
-    body: "Missing data, hallucination checks, med/dose verification, and final DVM review.",
+    body: "Missing data, hallucination checks, med/dose verification, diagnostic source verification, and final DVM review.",
   },
   {
     title: "Defined launch support",
@@ -71,7 +71,12 @@ export function Sprint() {
               </div>
             </div>
 
-            <p className="mt-8 max-w-lg text-[1.02rem] leading-relaxed text-paper/75">
+            <p className="mt-5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-paper/50">
+              A starter implementation for one workflow — not a complete
+              enterprise transformation.
+            </p>
+
+            <p className="mt-7 max-w-lg text-[1.02rem] leading-relaxed text-paper/75">
               VetFusion helps your team set up an AI-assisted SOAP and
               medical-record workflow tailored to your environment. We build
               the templates, prompts, review steps, treatment-sheet handoff,

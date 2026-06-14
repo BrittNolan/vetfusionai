@@ -32,6 +32,9 @@ function MockTreatmentSheet() {
       <p className="border-t border-line bg-flag/[0.06] px-5 py-2.5 font-mono text-[0.6rem] text-flag">
         ⚑ Missed dose flagged → escalation: notify DVM before next dose
       </p>
+      <p className="border-t border-line px-5 py-2 font-mono text-[0.58rem] text-moss">
+        Ordered: attending DVM · reviewed: DVM of record · updated 06/14
+      </p>
     </div>
   );
 }
@@ -66,6 +69,9 @@ function MockIcuBoard() {
           </div>
         ))}
       </div>
+      <p className="border-t border-line px-5 py-2.5 font-mono text-[0.6rem] text-moss">
+        Owner update sent 09:10 · 2 records pending DVM finalize
+      </p>
     </div>
   );
 }
@@ -104,12 +110,12 @@ function MockMedTracker() {
 const blocks = [
   {
     title: "Treatment sheets",
-    body: "Approved medical plans become daily action: medications, due times, monitoring instructions, restrictions, escalation triggers, and recheck needs — visible to the people carrying out care.",
+    body: "Approved medical plans become daily action: medications, due times, monitoring instructions, restrictions, escalation triggers, recheck needs, and the prescriber and reviewer on record — with refill and inventory links so reorders trigger before a med runs out.",
     mock: <MockTreatmentSheet />,
   },
   {
     title: "ICU & hospitalized cases",
-    body: "Rounds-friendly boards and daily review lists: current status, overnight changes, meds due, diagnostics pending, and what the veterinarian should see, ask, decide, or approve during rounds.",
+    body: "Rounds-friendly boards and daily review lists: current status, overnight changes, appetite, hydration, elimination, pain, mentation, and mobility, plus meds due and diagnostics pending — and what the veterinarian should see, ask, decide, or approve at rounds, with owner-comms status and what still needs finalizing.",
     mock: <MockIcuBoard />,
   },
   {

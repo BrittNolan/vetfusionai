@@ -25,7 +25,7 @@ const tools = [
   {
     route: "/dashboard",
     title: "Dashboard",
-    body: "Operational visibility for medical, inventory, business, risk, and continuity workflows.",
+    body: "Operational visibility for medical, inventory, business operations, risk, and continuity workflows.",
   },
 ];
 

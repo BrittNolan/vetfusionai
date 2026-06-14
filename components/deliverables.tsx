@@ -7,7 +7,7 @@ const items = [
   },
   {
     title: "Brief recheck SOAPs",
-    body: "Shorter records for stable rechecks, wound checks, weight checks, lab follow-ups, and routine monitoring.",
+    body: "Shorter, packet-safe records for stable rechecks, wound, eye, and weight checks, lab follow-ups, and routine monitoring.",
   },
   {
     title: "Treatment sheets",
