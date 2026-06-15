@@ -33,3 +33,5 @@ next-env.d.ts
 
 # generated single-file preview (node scripts/make-static-preview.mjs)
 /index.html
+
+.vercel
