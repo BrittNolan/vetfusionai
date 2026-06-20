@@ -4,6 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Wordmark } from "@/components/ui";
 
+// The clinical app lives on a separate surface (app.vetfusion.ai); auth lives
+// there. Override per environment with NEXT_PUBLIC_APP_URL.
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.vetfusion.ai";
+
 const links = [
   { href: "/#how-it-works", label: "How it works" },
   { href: "/#deliverables", label: "What we build" },
@@ -49,7 +53,13 @@ export function SiteNav() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-5 lg:flex">
+          <a
+            href={`${APP_URL}/login`}
+            className="text-[0.9rem] font-medium text-ink/70 transition-colors hover:text-pine"
+          >
+            Log in
+          </a>
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 text-[0.85rem] font-semibold text-paper transition duration-200 hover:bg-pine-deep active:scale-[0.97]"
@@ -96,10 +106,17 @@ export function SiteNav() {
               </li>
             ))}
           </ul>
+          <a
+            href={`${APP_URL}/login`}
+            onClick={() => setOpen(false)}
+            className="mt-5 flex items-center justify-center rounded-full border border-pine/30 px-5 py-3 font-semibold text-pine transition active:scale-[0.98]"
+          >
+            Log in
+          </a>
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-5 flex items-center justify-center rounded-full bg-pine px-5 py-3 font-semibold text-paper transition active:scale-[0.98]"
+            className="mt-3 flex items-center justify-center rounded-full bg-pine px-5 py-3 font-semibold text-paper transition active:scale-[0.98]"
           >
             Set Up Your Records Workflow
           </Link>
