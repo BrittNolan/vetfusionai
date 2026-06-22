@@ -67,7 +67,7 @@ export function PlatformPage({
             href="/"
             className="mt-12 inline-flex items-center gap-2 font-mono text-[0.78rem] text-moss transition-colors hover:text-pine"
           >
-            ← Back to vetfusionai.com
+            ← Back to vetfusion.ai
           </Link>
         </div>
       </main>
