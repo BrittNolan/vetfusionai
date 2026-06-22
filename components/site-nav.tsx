@@ -50,12 +50,12 @@ export function SiteNav() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <Link
-            href="/login"
+          <a
+            href="https://app.vetfusion.ai/login"
             className="text-[0.9rem] font-medium text-ink/70 transition-colors hover:text-pine"
           >
             Log in
-          </Link>
+          </a>
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 text-[0.85rem] font-semibold text-paper transition duration-200 hover:bg-pine-deep active:scale-[0.97]"
@@ -102,13 +102,12 @@ export function SiteNav() {
               </li>
             ))}
           </ul>
-          <Link
-            href="/login"
-            onClick={() => setOpen(false)}
+          <a
+            href="https://app.vetfusion.ai/login"
             className="block border-b border-line/70 py-3.5 font-medium text-ink/80"
           >
             Log in
-          </Link>
+          </a>
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
