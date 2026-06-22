@@ -31,12 +31,12 @@ export function SiteFooter() {
               sanctuaries. One setup. Launch support included.
             </p>
             <p className="mt-6 font-mono text-xs tracking-wide text-moss">
-              <a
-                href="mailto:rwhitney@vetfusionai.com"
+              <Link
+                href="/#contact"
                 className="underline-offset-4 hover:text-pine hover:underline"
               >
-                rwhitney@vetfusionai.com
-              </a>
+                Contact us →
+              </Link>
             </p>
           </div>
 
