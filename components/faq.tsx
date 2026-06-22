@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "What is the AI SOAP Setup Sprint?",
-    a: "A focused setup package, starting at $1,500, that helps an animal hospital, rescue, shelter, or sanctuary set up one AI-assisted medical-record workflow with templates, prompts, review steps, staff training, and launch support.",
+    a: "A focused setup package — priced by inquiry — that helps an animal hospital, rescue, shelter, or sanctuary set up one AI-assisted medical-record workflow with templates, prompts, review steps, staff training, and launch support.",
   },
   {
     q: "Can VetFusion train our team to use AI for SOAPs?",

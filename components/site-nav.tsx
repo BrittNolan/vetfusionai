@@ -7,7 +7,7 @@ import { Wordmark } from "@/components/ui";
 const links = [
   { href: "/#how-it-works", label: "How it works" },
   { href: "/#deliverables", label: "What we build" },
-  { href: "/#sprint", label: "Pricing" },
+  { href: "/#sprint", label: "Setup" },
   { href: "/#platform", label: "Platform" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#about", label: "About" },

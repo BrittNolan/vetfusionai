@@ -58,12 +58,12 @@ export function Sprint() {
             </h2>
 
             <div className="mt-9 flex flex-wrap items-end gap-x-5 gap-y-3">
-              <p className="font-display text-6xl font-medium tracking-tight text-paper sm:text-7xl">
-                $1,500
+              <p className="font-display text-5xl font-medium tracking-tight text-paper sm:text-6xl">
+                Priced by inquiry
               </p>
               <div className="pb-2">
                 <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-paper/60">
-                  starting at · one defined workflow
+                  scoped to one defined workflow
                 </p>
                 <Stamp className="mt-2.5 -rotate-2 text-copper-soft">
                   One-time setup
@@ -99,7 +99,7 @@ export function Sprint() {
 
             <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
               <ButtonPrimary href="/#contact" tone="dark">
-                Start a Setup Sprint
+                Request a Setup Sprint
               </ButtonPrimary>
               <ButtonSecondary href="/#contact" tone="dark">
                 Ask about larger builds

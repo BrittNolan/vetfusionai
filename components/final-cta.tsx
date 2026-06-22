@@ -26,15 +26,15 @@ export function FinalCta() {
           veterinarians in control of final medical decisions.
         </p>
         <div className="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <ButtonPrimary href="mailto:hello@vetfusionai.com?subject=Continuity%20Assessment" tone="dark">
+          <ButtonPrimary href="mailto:rwhitney@vetfusionai.com?subject=Continuity%20Assessment" tone="dark">
             Start With a Continuity Assessment
           </ButtonPrimary>
-          <ButtonSecondary href="mailto:hello@vetfusionai.com?subject=AI%20SOAP%20Setup%20Sprint" tone="dark">
+          <ButtonSecondary href="mailto:rwhitney@vetfusionai.com?subject=AI%20SOAP%20Setup%20Sprint" tone="dark">
             Ask about the Setup Sprint
           </ButtonSecondary>
         </div>
         <p className="reveal mt-8 font-mono text-[0.74rem] tracking-wide text-paper/65">
-          hello@vetfusionai.com · serving animal hospitals, rescues, shelters
+          rwhitney@vetfusionai.com · serving animal hospitals, rescues, shelters
           &amp; sanctuaries
         </p>
       </div>

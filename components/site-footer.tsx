@@ -32,10 +32,10 @@ export function SiteFooter() {
             </p>
             <p className="mt-6 font-mono text-xs tracking-wide text-moss">
               <a
-                href="mailto:hello@vetfusionai.com"
+                href="mailto:rwhitney@vetfusionai.com"
                 className="underline-offset-4 hover:text-pine hover:underline"
               >
-                hello@vetfusionai.com
+                rwhitney@vetfusionai.com
               </a>
             </p>
           </div>

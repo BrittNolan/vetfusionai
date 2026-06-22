@@ -251,8 +251,8 @@ export function Hero() {
                 "record time saved in founder use — your baseline is measured during setup",
             },
             {
-              stat: "From $1,500",
-              label: "AI SOAP Setup Sprint — one defined workflow, one-time setup",
+              stat: "One setup",
+              label: "AI SOAP Setup Sprint — one defined workflow, priced by inquiry",
             },
             {
               stat: "AI drafts.",
