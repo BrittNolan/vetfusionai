@@ -1,5 +1,9 @@
 import { ImageResponse } from "next/og";
 
+// Render at request time (Vercel Edge/Node), not during the static build.
+// Avoids a Windows-only @vercel/og prerender crash and keeps the card dynamic.
+export const dynamic = "force-dynamic";
+
 export const alt =
   "VetFusion — AI-assisted veterinary records, SOAPs, and care-continuity workflows";
 export const size = { width: 1200, height: 630 };

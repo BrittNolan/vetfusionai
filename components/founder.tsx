@@ -32,7 +32,7 @@ export function Founder() {
                   "Background in zoology & veterinary medicine",
                   "Animal-hospital ownership & operations experience",
                   "Hands-on work in complex rescue & sanctuary environments",
-                  "Care-continuity work at DELTA Rescue, Acton, California",
+                  "Built care-continuity systems for high-volume, multi-species caseloads",
                 ].map((item) => (
                   <li
                     key={item}
@@ -71,9 +71,8 @@ export function Founder() {
               </p>
               <p>
                 VetFusion was shaped through hands-on work in animal hospitals
-                and complex rescue/sanctuary environments — including
-                animal-care continuity support at DELTA Rescue in Acton,
-                California — where AI-assisted records workflows saved hours of
+                and complex rescue and sanctuary environments — real settings
+                where AI-assisted records workflows saved hours of
                 documentation time while producing cleaner, more reviewable
                 SOAPs and follow-through systems.
               </p>

@@ -21,17 +21,21 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.vetfusionai.com"),
+  metadataBase: new URL("https://vetfusion.ai"),
   title: {
     default: "VetFusion | AI-Assisted Veterinary Records and Care Continuity",
     template: "%s | VetFusion",
   },
   description:
     "VetFusion helps animal hospitals, rescues, shelters, and sanctuaries set up AI-assisted SOAP workflows, treatment sheets, diagnostic summaries, med follow-through, inventory visibility, and reviewable care systems.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "VetFusion | AI-Assisted Veterinary Records and Care Continuity",
     description:
       "Setup-and-support for AI-assisted veterinary records, SOAPs, and care-continuity workflows. One setup. Launch support included. Veterinarians stay in control.",
+    url: "https://vetfusion.ai",
     type: "website",
     siteName: "VetFusion",
   },
