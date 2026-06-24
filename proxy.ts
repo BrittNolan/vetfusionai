@@ -34,10 +34,10 @@ export function proxy(request: NextRequest) {
     }
   }
 
+  // NOTE: WWW-Authenticate must be ASCII only — non-ASCII (e.g. an em-dash) in
+  // the realm throws in the edge runtime and 500s instead of prompting.
   return new NextResponse("Authentication required.", {
     status: 401,
-    headers: {
-      "WWW-Authenticate": 'Basic realm="VetFusion — private preview", charset="UTF-8"',
-    },
+    headers: { "WWW-Authenticate": 'Basic realm="VetFusion", charset="UTF-8"' },
   });
 }
