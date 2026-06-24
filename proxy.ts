@@ -19,7 +19,13 @@ export function proxy(request: NextRequest) {
 
   const header = request.headers.get("authorization");
   if (header?.startsWith("Basic ")) {
-    const decoded = Buffer.from(header.slice(6), "base64").toString("utf8");
+    // Edge runtime: use atob (Web API), NOT Buffer (Node-only — would crash).
+    let decoded = "";
+    try {
+      decoded = atob(header.slice(6));
+    } catch {
+      decoded = "";
+    }
     const sep = decoded.indexOf(":");
     const givenUser = decoded.slice(0, sep);
     const givenPass = decoded.slice(sep + 1);
