@@ -30,7 +30,7 @@ export function Diagnostics() {
   return (
     <section className="border-t border-line bg-cream/50">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
-        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
             <SectionHeading
               index="08"
@@ -53,22 +53,18 @@ export function Diagnostics() {
                 </div>
               ))}
             </div>
-            <p className="reveal mt-9 rounded-xl border border-line bg-paper px-5 py-4 text-[0.82rem] leading-relaxed text-moss">
-              <span className="font-semibold text-ink">Boundary:</span> final
-              interpretation always remains with the veterinarian, radiologist,
-              sonographer, pathologist, or appropriate clinical reviewer.
-              VetFusion prepares
-              the review — it never provides final reads.
-            </p>
           </div>
 
           <div className="reveal">
-            <div className="overflow-hidden rounded-2xl border border-line bg-parchment shadow-lift">
-              <div className="flex items-center justify-between border-b border-line bg-paper px-6 py-4">
-                <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-moss">
+            <div
+              aria-hidden
+              className="overflow-hidden rounded-2xl border border-line bg-parchment shadow-lift"
+            >
+              <div className="flex items-start justify-between gap-3 border-b border-line bg-paper px-6 py-4">
+                <p className="min-w-0 font-mono text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-moss">
                   Lab trend summary · “Biscuit” · chem + CBC
                 </p>
-                <span className="rounded-full border border-copper/40 bg-copper/10 px-2.5 py-1 font-mono text-[0.55rem] font-semibold uppercase tracking-wider text-copper">
+                <span className="shrink-0 rounded-full border border-copper/40 bg-copper/10 px-2.5 py-1 font-mono text-[0.55rem] font-semibold whitespace-nowrap uppercase tracking-wider text-copper">
                   2 flags
                 </span>
               </div>
@@ -117,6 +113,12 @@ export function Diagnostics() {
                 </p>
               </div>
             </div>
+            <p className="reveal mt-6 rounded-xl border border-line bg-paper px-5 py-4 text-[0.82rem] leading-relaxed text-moss">
+              <span className="font-semibold text-ink">Boundary:</span> final
+              interpretation always remains with the veterinarian, radiologist,
+              sonographer, pathologist, or appropriate clinical reviewer.
+              VetFusion prepares the review — it never provides final reads.
+            </p>
           </div>
         </div>
       </div>

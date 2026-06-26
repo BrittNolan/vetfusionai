@@ -60,7 +60,7 @@ export function SiteNav() {
             href="/#contact"
             className="inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 text-[0.85rem] font-semibold text-paper transition duration-200 hover:bg-pine-deep active:scale-[0.97]"
           >
-            Set Up Your Records Workflow
+            Set up your records workflow
           </Link>
         </div>
 
@@ -68,6 +68,7 @@ export function SiteNav() {
           type="button"
           className="flex size-11 flex-col items-center justify-center gap-1.5 transition active:scale-95 lg:hidden"
           aria-expanded={open}
+          aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -86,6 +87,7 @@ export function SiteNav() {
 
       {open && (
         <nav
+          id="mobile-menu"
           aria-label="Mobile"
           className="border-t border-line bg-paper px-5 pt-2 pb-6 lg:hidden"
         >
@@ -95,7 +97,7 @@ export function SiteNav() {
                 <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3.5 font-medium text-ink/80"
+                  className="block py-3.5 font-medium text-ink/80 active:text-pine"
                 >
                   {l.label}
                 </Link>
@@ -113,7 +115,7 @@ export function SiteNav() {
             onClick={() => setOpen(false)}
             className="mt-5 flex items-center justify-center rounded-full bg-pine px-5 py-3 font-semibold text-paper transition active:scale-[0.98]"
           >
-            Set Up Your Records Workflow
+            Set up your records workflow
           </Link>
         </nav>
       )}

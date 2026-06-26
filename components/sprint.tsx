@@ -71,7 +71,7 @@ export function Sprint() {
               </div>
             </div>
 
-            <p className="mt-5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-paper/50">
+            <p className="mt-5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-paper/60">
               A starter implementation for one workflow — not a complete
               enterprise transformation.
             </p>
@@ -85,7 +85,7 @@ export function Sprint() {
               veterinarians in control of final medical decisions.
             </p>
 
-            <div className="mt-8 rounded-xl border border-paper/15 bg-paper/5 p-5">
+            <div className="mt-8 rounded-xl border border-paper/15 bg-paper/[0.02] p-5">
               <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-copper-soft">
                 Support model
               </p>
@@ -105,7 +105,7 @@ export function Sprint() {
                 Ask about larger builds
               </ButtonSecondary>
             </div>
-            <p className="mt-5 font-mono text-[0.7rem] leading-relaxed tracking-wide text-paper/50">
+            <p className="mt-5 font-mono text-[0.7rem] leading-relaxed tracking-wide text-paper/60">
               Larger builds — records + treatment follow-through, 30-day
               records reset, ICU continuity, rescue/sanctuary buildouts — are
               scoped custom.
@@ -128,7 +128,10 @@ export function Sprint() {
                     key={item.title}
                     className="flex gap-5 border-b border-paper/10 px-7 py-4.5 last:border-b-0"
                   >
-                    <span className="mt-0.5 font-mono text-[0.68rem] font-medium text-copper-soft">
+                    <span
+                      aria-hidden
+                      className="mt-0.5 font-mono text-[0.68rem] font-medium text-copper-soft"
+                    >
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div>

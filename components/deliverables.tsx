@@ -77,7 +77,10 @@ export function Deliverables() {
                 <h3 className="font-display text-[1.18rem] font-medium tracking-tight text-ink">
                   {item.title}
                 </h3>
-                <span className="font-mono text-[0.62rem] text-ink/30 transition-colors group-hover:text-copper">
+                <span
+                  aria-hidden
+                  className="font-mono text-[0.62rem] text-ink/30 transition-colors group-hover:text-copper"
+                >
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>

@@ -93,11 +93,11 @@ export function Hero() {
               <Eyebrow>Setup &amp; support for animal-care teams</Eyebrow>
             </div>
             <h1
-              className="hero-rise mt-6 font-display text-[2.65rem] leading-[1.06] font-medium tracking-tight text-balance text-ink sm:text-6xl lg:text-[4.1rem] lg:leading-[1.1]"
+              className="hero-rise mt-6 font-display text-[clamp(2.65rem,5.2vw+1rem,4.1rem)] leading-[1.06] font-medium tracking-tight text-balance text-ink lg:leading-[1.1]"
               style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
             >
               AI-assisted veterinary records, SOAPs, and{" "}
-              <em className="whitespace-nowrap text-pine italic">care-continuity</em>{" "}
+              <em className="text-pine italic sm:whitespace-nowrap">care-continuity</em>{" "}
               workflows.
             </h1>
             <p
@@ -116,10 +116,10 @@ export function Hero() {
               style={{ "--rise-delay": "0.24s" } as React.CSSProperties}
             >
               <ButtonPrimary href="/#contact">
-                Set Up Your Records Workflow
+                Set up your records workflow
               </ButtonPrimary>
               <ButtonSecondary href="/#contact">
-                Start With a Continuity Assessment
+                Start with a continuity assessment
               </ButtonSecondary>
             </div>
             <p
@@ -131,8 +131,11 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Chart artifacts */}
-          <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
+          {/* Chart artifacts — decorative product illustration, hidden from assistive tech */}
+          <div
+            aria-hidden
+            className="relative mx-auto w-full max-w-[460px] lg:max-w-none"
+          >
             {/* Treatment sheet, tucked behind */}
             <div
               className="hero-settle absolute -top-8 -left-4 hidden w-72 rotate-[-5deg] rounded-xl border border-line bg-cream/90 p-4 shadow-card sm:block"

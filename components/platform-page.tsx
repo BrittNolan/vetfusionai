@@ -17,7 +17,7 @@ export function PlatformPage({
   return (
     <>
       <SiteNav />
-      <main className="relative overflow-hidden">
+      <main id="main-content" className="relative overflow-hidden">
         <div aria-hidden className="ruled ruled-fade pointer-events-none absolute inset-0" />
         <div className="relative mx-auto max-w-4xl px-5 pt-40 pb-28 sm:px-8 lg:pt-48">
           <p className="font-mono text-[0.8rem] font-semibold text-copper">
@@ -55,7 +55,7 @@ export function PlatformPage({
           </div>
 
           <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <ButtonPrimary href="/#contact">Set Up Your Records Workflow</ButtonPrimary>
+            <ButtonPrimary href="/#contact">Set up your records workflow</ButtonPrimary>
             <p className="max-w-sm text-[0.85rem] leading-relaxed text-moss">
               Platform access is provisioned for your team as part of a
               VetFusion setup — sign-in for existing teams continues to work as

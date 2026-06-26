@@ -101,7 +101,7 @@ export function TimeSavings() {
                     <span className="hidden truncate font-mono text-[0.7rem] text-moss sm:block">
                       {row.assumption}
                     </span>
-                    <span className="font-display text-lg font-medium text-pine tabular-nums">
+                    <span className="justify-self-end font-display text-lg font-medium text-pine tabular-nums">
                       {row.value}
                     </span>
                   </div>

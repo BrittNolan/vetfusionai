@@ -64,7 +64,7 @@ export function Faq() {
               key={item.q}
               className="faq group border-b border-line last:border-b-0"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-7 py-5 transition-colors hover:bg-parchment sm:px-9">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-7 py-5 transition-colors hover:bg-parchment active:bg-cream sm:px-9">
                 <h3 className="text-[1rem] font-semibold text-ink sm:text-[1.05rem]">
                   {item.q}
                 </h3>

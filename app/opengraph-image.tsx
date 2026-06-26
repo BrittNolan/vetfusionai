@@ -43,9 +43,16 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 14 }}>
             <div style={{ fontSize: 96, fontWeight: 700 }}>VetFusion</div>
-            <div style={{ fontSize: 56, color: "#d97742", fontWeight: 700 }}>
-              +
-            </div>
+            {/* Bespoke squared medical-cross mark — identical path to the wordmark + favicon */}
+            <svg
+              width="52"
+              height="52"
+              viewBox="0 0 12 12"
+              fill="#d97742"
+              style={{ marginBottom: 10 }}
+            >
+              <path d="M4.5 0h3v4.5H12v3H7.5V12h-3V7.5H0v-3h4.5V0z" />
+            </svg>
           </div>
           <div
             style={{

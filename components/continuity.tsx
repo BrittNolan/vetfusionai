@@ -9,11 +9,13 @@ function MockTreatmentSheet() {
   ];
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-parchment shadow-card">
-      <div className="flex items-center justify-between border-b border-line bg-cream/60 px-5 py-3">
-        <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
+      <div className="flex items-start justify-between gap-3 border-b border-line bg-cream/60 px-5 py-3">
+        <p className="min-w-0 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
           Treatment sheet · “Maple” · feline
         </p>
-        <span className="font-mono text-[0.58rem] uppercase text-moss">Day 3/5</span>
+        <span className="shrink-0 font-mono text-[0.58rem] whitespace-nowrap uppercase text-moss">
+          Day 3/5
+        </span>
       </div>
       <div className="px-5">
         {rows.map((r) => (
@@ -47,11 +49,13 @@ function MockIcuBoard() {
   ];
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-parchment shadow-card">
-      <div className="flex items-center justify-between border-b border-line bg-cream/60 px-5 py-3">
-        <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
+      <div className="flex items-start justify-between gap-3 border-b border-line bg-cream/60 px-5 py-3">
+        <p className="min-w-0 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
           ICU / hospitalized board · AM rounds
         </p>
-        <span className="font-mono text-[0.58rem] uppercase text-moss">3 active</span>
+        <span className="shrink-0 font-mono text-[0.58rem] whitespace-nowrap uppercase text-moss">
+          3 active
+        </span>
       </div>
       <div className="divide-y divide-line/60">
         {patients.map((p) => (
@@ -93,7 +97,9 @@ function MockMedTracker() {
       <div className="grid grid-cols-2 gap-px bg-line/60">
         {meds.map((m) => (
           <div key={m.label} className="bg-parchment px-5 py-4">
-            <p className={`font-display text-2xl font-medium ${m.tone}`}>{m.value}</p>
+            <p className={`font-display text-2xl font-medium tabular-nums ${m.tone}`}>
+              {m.value}
+            </p>
             <p className="mt-0.5 font-mono text-[0.58rem] uppercase tracking-wider text-moss">
               {m.label}
             </p>
@@ -147,7 +153,7 @@ export function Continuity() {
               key={block.title}
               className="reveal flex flex-col gap-6 rounded-2xl border border-line bg-paper p-6 shadow-card sm:p-7"
             >
-              {block.mock}
+              <div aria-hidden>{block.mock}</div>
               <div>
                 <h3 className="font-display text-[1.45rem] font-medium tracking-tight text-ink">
                   {block.title}
