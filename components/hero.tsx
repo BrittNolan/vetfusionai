@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonPrimary, ButtonSecondary, Eyebrow, Stamp } from "@/components/ui";
 
 function SoapRow({
@@ -84,6 +85,19 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute top-[30%] left-[-20%] size-[520px] rounded-full bg-cream blur-[100px]"
       />
+      {/* Companion-animal line motif — faint, decorative, desktop only */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-[-3%] bottom-[-6%] hidden w-[clamp(320px,30vw,520px)] opacity-[0.14] mix-blend-multiply lg:block"
+      >
+        <Image
+          src="/illustrations/hero-companions.webp"
+          alt=""
+          width={1024}
+          height={1024}
+          className="h-auto w-full"
+        />
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-5 pt-36 pb-20 sm:px-8 lg:pt-44 lg:pb-28">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">

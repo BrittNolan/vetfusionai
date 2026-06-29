@@ -11,6 +11,7 @@ export default function TimelinePage() {
   return (
     <PlatformPage
       route="/timeline"
+      illustration="/illustrations/timeline.webp"
       title="Timeline"
       description="A chronological patient and case history view for review and continuity — so any veterinarian or caregiver can see the whole story of a case at a glance."
       capabilities={[

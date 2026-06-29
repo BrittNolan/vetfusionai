@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
@@ -8,11 +9,13 @@ export function PlatformPage({
   title,
   description,
   capabilities,
+  illustration,
 }: {
   route: string;
   title: string;
   description: string;
   capabilities: string[];
+  illustration?: string;
 }) {
   return (
     <>
@@ -20,15 +23,29 @@ export function PlatformPage({
       <main id="main-content" className="relative overflow-hidden">
         <div aria-hidden className="ruled ruled-fade pointer-events-none absolute inset-0" />
         <div className="relative mx-auto max-w-4xl px-5 pt-40 pb-28 sm:px-8 lg:pt-48">
-          <p className="font-mono text-[0.8rem] font-semibold text-copper">
-            VetFusion platform · {route}
-          </p>
-          <h1 className="mt-5 font-display text-5xl font-medium tracking-tight text-balance text-ink sm:text-6xl">
-            {title}
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-moss">
-            {description}
-          </p>
+          <div className="flex flex-col-reverse items-start gap-10 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+            <div className="min-w-0">
+              <p className="font-mono text-[0.8rem] font-semibold text-copper">
+                VetFusion platform · {route}
+              </p>
+              <h1 className="mt-5 font-display text-5xl font-medium tracking-tight text-balance text-ink sm:text-6xl">
+                {title}
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-moss">
+                {description}
+              </p>
+            </div>
+            {illustration && (
+              <Image
+                src={illustration}
+                alt=""
+                aria-hidden
+                width={512}
+                height={512}
+                className="w-40 shrink-0 self-center sm:w-44 lg:w-52"
+              />
+            )}
+          </div>
 
           <div className="mt-12 rounded-2xl border border-line bg-parchment p-8 shadow-card sm:p-10">
             <div className="flex flex-wrap items-center justify-between gap-4">

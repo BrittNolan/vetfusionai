@@ -11,6 +11,7 @@ export default function TrackerPage() {
   return (
     <PlatformPage
       route="/tracker"
+      illustration="/illustrations/tracker.webp"
       title="Tracker"
       description="Active patient, treatment, recheck, inventory, and follow-up tracking — so what is active, what changed, and what is overdue stays visible to the whole team."
       capabilities={[
