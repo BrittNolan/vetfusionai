@@ -3,10 +3,10 @@ import { SectionHeading, Stamp } from "@/components/ui";
 export function Founder() {
   return (
     <section id="about" className="border-t border-line">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
           {/* Founder card */}
-          <div className="reveal relative mx-auto w-full max-w-md">
+          <div className="reveal relative order-2 mx-auto w-full max-w-md lg:order-1">
             <div className="rotate-[-1.5deg] rounded-2xl border border-line bg-parchment p-8 shadow-lift sm:p-10">
               <div className="flex items-center justify-between">
                 <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-moss">
@@ -47,7 +47,7 @@ export function Founder() {
           </div>
 
           {/* Story */}
-          <div>
+          <div className="order-1 lg:order-2">
             <SectionHeading
               index="13"
               eyebrow="About"

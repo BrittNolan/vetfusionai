@@ -55,7 +55,7 @@ export function SectionHeading({
         </Eyebrow>
       </div>
       <h2
-        className={`mt-5 font-display text-4xl font-medium tracking-tight leading-[1.08] text-balance sm:text-5xl ${
+        className={`mt-5 font-display text-3xl font-medium tracking-tight leading-[1.1] text-balance sm:text-4xl ${
           tone === "dark" ? "text-paper" : "text-ink"
         }`}
       >

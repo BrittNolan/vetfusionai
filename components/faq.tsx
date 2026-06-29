@@ -46,7 +46,7 @@ const faqs = [
 export function Faq() {
   return (
     <section id="faq" className="border-t border-line bg-cream/50">
-      <div className="mx-auto max-w-4xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-4xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <SectionHeading
           index="12"
           eyebrow="Questions"
@@ -58,7 +58,7 @@ export function Faq() {
           }
         />
 
-        <div className="reveal mt-12 overflow-hidden rounded-2xl border border-line bg-paper shadow-card">
+        <div className="reveal mt-10 overflow-hidden rounded-2xl border border-line bg-paper shadow-card lg:mt-12">
           {faqs.map((item) => (
             <details
               key={item.q}

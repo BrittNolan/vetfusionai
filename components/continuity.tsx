@@ -134,7 +134,7 @@ const blocks = [
 export function Continuity() {
   return (
     <section className="border-t border-line">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <SectionHeading
           index="07"
           eyebrow="Clinical continuity"
@@ -147,13 +147,12 @@ export function Continuity() {
           lede="A SOAP draft is only useful if it leads to review, approval, treatment follow-through, and a finalized record. VetFusion connects record generation to the daily work."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-14 lg:grid-cols-3">
           {blocks.map((block) => (
             <div
               key={block.title}
-              className="reveal flex flex-col gap-6 rounded-2xl border border-line bg-paper p-6 shadow-card sm:p-7"
+              className="reveal flex h-full flex-col gap-6 rounded-2xl border border-line bg-paper p-6 shadow-card sm:p-7"
             >
-              <div aria-hidden>{block.mock}</div>
               <div>
                 <h3 className="font-display text-[1.45rem] font-medium tracking-tight text-ink">
                   {block.title}
@@ -161,6 +160,9 @@ export function Continuity() {
                 <p className="mt-2.5 text-[0.9rem] leading-relaxed text-moss">
                   {block.body}
                 </p>
+              </div>
+              <div aria-hidden className="mt-auto">
+                {block.mock}
               </div>
             </div>
           ))}

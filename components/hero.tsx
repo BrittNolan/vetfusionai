@@ -258,7 +258,7 @@ export function Hero() {
 
         {/* Stat strip */}
         <div
-          className="hero-rise mt-20 grid grid-cols-1 divide-y divide-line border-y border-line sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+          className="hero-rise mt-12 grid grid-cols-1 divide-y divide-line border-y border-line sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:mt-16"
           style={{ "--rise-delay": "0.5s" } as React.CSSProperties}
         >
           {[
@@ -276,7 +276,7 @@ export function Hero() {
               label: "Veterinarians decide. Human review on every record.",
             },
           ].map((item) => (
-            <div key={item.stat} className="px-2 py-6 sm:px-8 sm:first:pl-2">
+            <div key={item.stat} className="px-0 py-6 sm:px-8 sm:first:pl-2">
               <p className="font-display text-3xl font-medium tracking-tight text-pine">
                 {item.stat}
               </p>

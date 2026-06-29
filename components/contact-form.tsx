@@ -171,12 +171,12 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center justify-center rounded-full bg-copper px-7 py-3 text-[0.9rem] font-semibold text-paper transition duration-200 hover:bg-[#8f4423] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex w-full items-center justify-center rounded-full bg-copper px-7 py-3 text-[0.9rem] font-semibold text-paper transition duration-200 hover:bg-copper-deep active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
         >
           {status === "sending" ? "Sending…" : "Request a setup conversation"}
         </button>
       </div>
-      <p className="mt-4 text-center font-mono text-[0.7rem] tracking-wide text-paper/55">
+      <p className="mt-4 text-center font-mono text-[0.78rem] tracking-wide text-paper/75">
         We&rsquo;ll reply by email — no spam, ever.
       </p>
     </form>

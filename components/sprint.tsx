@@ -46,8 +46,8 @@ export function Sprint() {
         aria-hidden
         className="pointer-events-none absolute -top-48 left-1/4 size-[560px] rounded-full bg-pine-soft/30 blur-[140px]"
       />
-      <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
+      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <div className="reveal">
             <Eyebrow index="05" tone="dark">
               The starter package
@@ -58,7 +58,7 @@ export function Sprint() {
             </h2>
 
             <div className="mt-9 flex flex-wrap items-end gap-x-5 gap-y-3">
-              <p className="font-display text-5xl font-medium tracking-tight text-paper sm:text-6xl">
+              <p className="font-display text-4xl font-medium tracking-tight text-paper sm:text-5xl">
                 Priced by inquiry
               </p>
               <div className="pb-2">

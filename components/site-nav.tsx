@@ -24,9 +24,23 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu on Escape and lock body scroll while it's open.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${
         scrolled || open
           ? "border-b border-line bg-paper/90 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
@@ -103,13 +117,16 @@ export function SiteNav() {
                 </Link>
               </li>
             ))}
+            <li className="border-b border-line/70">
+              <a
+                href="https://app.vetfusion.ai/login"
+                onClick={() => setOpen(false)}
+                className="block py-3.5 font-medium text-ink/80 active:text-pine"
+              >
+                Log in
+              </a>
+            </li>
           </ul>
-          <a
-            href="https://app.vetfusion.ai/login"
-            className="block border-b border-line/70 py-3.5 font-medium text-ink/80"
-          >
-            Log in
-          </a>
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
