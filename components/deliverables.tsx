@@ -54,7 +54,7 @@ const items = [
 export function Deliverables() {
   return (
     <section id="deliverables" className="border-t border-line">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <SectionHeading
           index="04"
           eyebrow="What we help build"
@@ -67,17 +67,20 @@ export function Deliverables() {
           lede="The note is the entry point — the workflow is the value. Every deliverable is a working document your team actually uses, not software noise."
         />
 
-        <div className="reveal mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <div className="reveal mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
           {items.map((item, i) => (
             <div
               key={item.title}
-              className="group bg-paper p-7 transition-colors duration-300 hover:bg-parchment sm:p-8"
+              className="bg-paper p-6 sm:p-8"
             >
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="font-display text-[1.18rem] font-medium tracking-tight text-ink">
                   {item.title}
                 </h3>
-                <span className="font-mono text-[0.62rem] text-ink/30 transition-colors group-hover:text-copper">
+                <span
+                  aria-hidden
+                  className="font-mono text-[0.62rem] text-ink/30"
+                >
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>

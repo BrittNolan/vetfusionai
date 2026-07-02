@@ -46,8 +46,8 @@ export function Sprint() {
         aria-hidden
         className="pointer-events-none absolute -top-48 left-1/4 size-[560px] rounded-full bg-pine-soft/30 blur-[140px]"
       />
-      <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
+      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <div className="reveal">
             <Eyebrow index="05" tone="dark">
               The starter package
@@ -58,7 +58,7 @@ export function Sprint() {
             </h2>
 
             <div className="mt-9 flex flex-wrap items-end gap-x-5 gap-y-3">
-              <p className="font-display text-5xl font-medium tracking-tight text-paper sm:text-6xl">
+              <p className="font-display text-4xl font-medium tracking-tight text-paper sm:text-5xl">
                 Priced by inquiry
               </p>
               <div className="pb-2">
@@ -71,7 +71,7 @@ export function Sprint() {
               </div>
             </div>
 
-            <p className="mt-5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-paper/50">
+            <p className="mt-5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-paper/60">
               A starter implementation for one workflow — not a complete
               enterprise transformation.
             </p>
@@ -85,7 +85,7 @@ export function Sprint() {
               veterinarians in control of final medical decisions.
             </p>
 
-            <div className="mt-8 rounded-xl border border-paper/15 bg-paper/5 p-5">
+            <div className="mt-8 rounded-xl border border-paper/15 bg-paper/[0.02] p-5">
               <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-copper-soft">
                 Support model
               </p>
@@ -105,7 +105,7 @@ export function Sprint() {
                 Ask about larger builds
               </ButtonSecondary>
             </div>
-            <p className="mt-5 font-mono text-[0.7rem] leading-relaxed tracking-wide text-paper/50">
+            <p className="mt-5 font-mono text-[0.7rem] leading-relaxed tracking-wide text-paper/60">
               Larger builds — records + treatment follow-through, 30-day
               records reset, ICU continuity, rescue/sanctuary buildouts — are
               scoped custom.
@@ -128,7 +128,10 @@ export function Sprint() {
                     key={item.title}
                     className="flex gap-5 border-b border-paper/10 px-7 py-4.5 last:border-b-0"
                   >
-                    <span className="mt-0.5 font-mono text-[0.68rem] font-medium text-copper-soft">
+                    <span
+                      aria-hidden
+                      className="mt-0.5 font-mono text-[0.68rem] font-medium text-copper-soft"
+                    >
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div>

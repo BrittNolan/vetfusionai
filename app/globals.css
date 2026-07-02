@@ -13,15 +13,19 @@
   --color-pine: #16473b;
   --color-pine-soft: #1e5c4c;
   --color-pine-deep: #0c2a22;
-  --color-moss: #54665c;
+  --color-moss: #475649;
   --color-sage: #e4ebe3;
   --color-line: #e4ddcb;
   --color-copper: #a04a20;
   --color-copper-soft: #d97742;
+  --color-copper-deep: #8f4423;
   --color-flag: #b3442e;
 
   --shadow-card: 0 1px 2px rgb(32 48 42 / 0.04), 0 8px 24px -12px rgb(32 48 42 / 0.12);
   --shadow-lift: 0 1px 2px rgb(32 48 42 / 0.05), 0 24px 48px -16px rgb(32 48 42 / 0.18);
+
+  /* Entrance curve — named by intent, referenced everywhere instead of a repeated literal */
+  --ease-rise: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 :root {
@@ -55,6 +59,12 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-copper);
   outline-offset: 2px;
+}
+
+/* On the dark pine bands the deep copper ring is < 3:1 against the background —
+   switch to the lighter copper there so keyboard focus stays clearly visible. */
+[class*="bg-pine"] :focus-visible {
+  outline-color: var(--color-copper-soft);
 }
 
 /* ---- Ruled-paper texture (used behind hero and select bands) ---- */
@@ -104,11 +114,11 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-rise {
-    animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: rise-in 0.9s var(--ease-rise) both;
     animation-delay: var(--rise-delay, 0s);
   }
   .hero-settle {
-    animation: settle-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: settle-in 1.1s var(--ease-rise) both;
     animation-delay: var(--rise-delay, 0s);
   }
 }
@@ -119,7 +129,7 @@ body {
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
-      animation: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: rise-in 0.7s var(--ease-rise) forwards;
       animation-timeline: view();
       animation-range: entry 10% entry 42%;
     }
@@ -138,11 +148,17 @@ body {
 details.faq::details-content {
   block-size: 0;
   overflow: hidden;
-  transition: block-size 0.35s cubic-bezier(0.16, 1, 0.3, 1), content-visibility 0.35s allow-discrete;
 }
 
 details.faq[open]::details-content {
   block-size: auto;
+}
+
+/* Animate the height only when motion is welcome; reduced-motion still snaps open. */
+@media (prefers-reduced-motion: no-preference) {
+  details.faq::details-content {
+    transition: block-size 0.35s var(--ease-rise), content-visibility 0.35s allow-discrete;
+  }
 }
 
 details.faq summary::-webkit-details-marker {
@@ -166,5 +182,4 @@ details.faq[open] .faq-plus {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40'%3E%3Crect width='120' height='40' fill='white'/%3E%3C/svg%3E");
 }

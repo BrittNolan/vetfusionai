@@ -23,7 +23,7 @@ const structured = [
 export function Bottleneck() {
   return (
     <section className="border-t border-line bg-parchment/60">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <SectionHeading
           index="01"
           eyebrow="The problem"
@@ -35,7 +35,7 @@ export function Bottleneck() {
           lede="Every animal-care team has important information spread across conversations, paper notes, treatment boards, lab results, imaging reports, invoices, staff memory, and individual patient records. VetFusion helps turn that scattered information into cleaner SOAP drafts, treatment sheets, review packets, and follow-through systems."
         />
 
-        <div className="reveal mt-16 grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
+        <div className="reveal mt-10 grid grid-cols-1 items-center gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
           {/* Scattered */}
           <div className="rounded-2xl border border-dashed border-ink/20 p-7 sm:p-9">
             <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-moss">
@@ -79,9 +79,6 @@ export function Bottleneck() {
                   </span>
                   <span className="text-[0.95rem] leading-snug text-ink/85">
                     {item}
-                  </span>
-                  <span aria-hidden className="ml-auto mt-0.5 text-pine">
-                    ✓
                   </span>
                 </li>
               ))}

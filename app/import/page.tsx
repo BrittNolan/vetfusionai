@@ -11,6 +11,7 @@ export default function ImportPage() {
   return (
     <PlatformPage
       route="/import"
+      illustration="/illustrations/import.webp"
       title="Import"
       description="Bulk patient, record, inventory, or workflow import support — for bringing existing records and trackers into a structured, reviewable system without retyping everything."
       capabilities={[

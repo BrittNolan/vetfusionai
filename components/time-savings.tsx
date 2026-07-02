@@ -18,7 +18,7 @@ const roiRows = [
 export function TimeSavings() {
   return (
     <section className="border-t border-line">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-20">
           <div>
             <SectionHeading
@@ -33,11 +33,7 @@ export function TimeSavings() {
               }
               lede="VetFusion is designed to reduce record burden while improving structure, completeness, and reviewability. Faster records should not mean thinner records. The goal is cleaner documentation, less after-hours charting, and better follow-through."
             />
-            <p className="reveal mt-7 font-display text-xl leading-snug text-pine/90">
-              Cleaner records in less time. Less chart backlog. Faster review.
-              More visible follow-through.
-            </p>
-            <ul className="reveal mt-8 space-y-0">
+            <ul className="reveal mt-8 space-y-0 lg:mt-10">
               {bullets.map((b) => (
                 <li
                   key={b}
@@ -67,8 +63,8 @@ export function TimeSavings() {
               <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-copper-soft">
                 Field result
               </p>
-              <p className="mt-4 font-display text-6xl font-medium tracking-tight sm:text-7xl">
-                ~5 <span className="text-4xl sm:text-5xl">hrs/day</span>
+              <p className="mt-4 font-display text-5xl font-medium tracking-tight sm:text-6xl">
+                ~5 <span className="text-3xl sm:text-4xl">hrs/day</span>
               </p>
               <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-paper/75">
                 Record time saved in a real-world, high-volume AI-assisted
@@ -93,15 +89,15 @@ export function TimeSavings() {
                 {roiRows.map((row) => (
                   <div
                     key={row.scenario}
-                    className="grid grid-cols-[auto_1fr_auto] items-baseline gap-x-4 border-b border-line/60 py-3.5 last:border-b-0"
+                    className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1 border-b border-line/60 py-3.5 last:border-b-0 sm:grid-cols-[auto_1fr_auto]"
                   >
                     <span className="text-[0.9rem] font-semibold text-ink">
                       {row.scenario}
                     </span>
-                    <span className="hidden truncate font-mono text-[0.7rem] text-moss sm:block">
+                    <span className="order-last col-span-2 font-mono text-[0.7rem] text-moss sm:order-none sm:col-span-1 sm:truncate">
                       {row.assumption}
                     </span>
-                    <span className="font-display text-lg font-medium text-pine tabular-nums">
+                    <span className="justify-self-end font-display text-lg font-medium text-pine tabular-nums">
                       {row.value}
                     </span>
                   </div>

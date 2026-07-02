@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonPrimary, ButtonSecondary, Eyebrow, Stamp } from "@/components/ui";
 
 function SoapRow({
@@ -84,6 +85,19 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute top-[30%] left-[-20%] size-[520px] rounded-full bg-cream blur-[100px]"
       />
+      {/* Companion-animal line motif — faint, decorative, desktop only */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-[-3%] bottom-[-6%] hidden w-[clamp(320px,30vw,520px)] opacity-[0.14] mix-blend-multiply lg:block"
+      >
+        <Image
+          src="/illustrations/hero-companions.webp"
+          alt=""
+          width={1024}
+          height={1024}
+          className="h-auto w-full"
+        />
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-5 pt-36 pb-20 sm:px-8 lg:pt-44 lg:pb-28">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
@@ -93,11 +107,11 @@ export function Hero() {
               <Eyebrow>Setup &amp; support for animal-care teams</Eyebrow>
             </div>
             <h1
-              className="hero-rise mt-6 font-display text-[2.65rem] leading-[1.06] font-medium tracking-tight text-balance text-ink sm:text-6xl lg:text-[4.1rem] lg:leading-[1.1]"
+              className="hero-rise mt-6 font-display text-[clamp(2.65rem,5.2vw+1rem,4.1rem)] leading-[1.06] font-medium tracking-tight text-balance text-ink lg:leading-[1.1]"
               style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
             >
               AI-assisted veterinary records, SOAPs, and{" "}
-              <em className="whitespace-nowrap text-pine italic">care-continuity</em>{" "}
+              <em className="text-pine italic sm:whitespace-nowrap">care-continuity</em>{" "}
               workflows.
             </h1>
             <p
@@ -116,10 +130,10 @@ export function Hero() {
               style={{ "--rise-delay": "0.24s" } as React.CSSProperties}
             >
               <ButtonPrimary href="/#contact">
-                Set Up Your Records Workflow
+                Set up your records workflow
               </ButtonPrimary>
               <ButtonSecondary href="/#contact">
-                Start With a Continuity Assessment
+                Start with a continuity assessment
               </ButtonSecondary>
             </div>
             <p
@@ -131,8 +145,11 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Chart artifacts */}
-          <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
+          {/* Chart artifacts — decorative product illustration, hidden from assistive tech */}
+          <div
+            aria-hidden
+            className="relative mx-auto w-full max-w-[460px] lg:max-w-none"
+          >
             {/* Treatment sheet, tucked behind */}
             <div
               className="hero-settle absolute -top-8 -left-4 hidden w-72 rotate-[-5deg] rounded-xl border border-line bg-cream/90 p-4 shadow-card sm:block"
@@ -241,7 +258,7 @@ export function Hero() {
 
         {/* Stat strip */}
         <div
-          className="hero-rise mt-20 grid grid-cols-1 divide-y divide-line border-y border-line sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+          className="hero-rise mt-12 grid grid-cols-1 divide-y divide-line border-y border-line sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:mt-16"
           style={{ "--rise-delay": "0.5s" } as React.CSSProperties}
         >
           {[
@@ -259,7 +276,7 @@ export function Hero() {
               label: "Veterinarians decide. Human review on every record.",
             },
           ].map((item) => (
-            <div key={item.stat} className="px-2 py-6 sm:px-8 sm:first:pl-2">
+            <div key={item.stat} className="px-0 py-6 sm:px-8 sm:first:pl-2">
               <p className="font-display text-3xl font-medium tracking-tight text-pine">
                 {item.stat}
               </p>

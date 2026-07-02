@@ -55,7 +55,7 @@ export function SectionHeading({
         </Eyebrow>
       </div>
       <h2
-        className={`mt-5 font-display text-4xl font-medium tracking-tight text-balance sm:text-5xl ${
+        className={`mt-5 font-display text-3xl font-medium tracking-tight leading-[1.1] text-balance sm:text-4xl ${
           tone === "dark" ? "text-paper" : "text-ink"
         }`}
       >
@@ -63,9 +63,9 @@ export function SectionHeading({
       </h2>
       {lede && (
         <p
-          className={`mt-5 text-lg leading-relaxed ${
-            tone === "dark" ? "text-paper/75" : "text-moss"
-          }`}
+          className={`mt-5 max-w-[62ch] text-lg leading-relaxed ${
+            align === "center" ? "mx-auto" : ""
+          } ${tone === "dark" ? "text-paper/75" : "text-moss"}`}
         >
           {lede}
         </p>
@@ -86,7 +86,7 @@ export function ButtonPrimary({
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold transition duration-200 active:scale-[0.97] ${
+      className={`group inline-flex items-center justify-center gap-2.5 rounded-full border border-transparent px-7 py-3.5 text-[0.95rem] font-semibold transition duration-200 active:scale-[0.97] ${
         tone === "dark"
           ? "bg-paper text-pine-deep hover:bg-cream"
           : "bg-pine text-paper shadow-card hover:bg-pine-deep hover:shadow-lift"

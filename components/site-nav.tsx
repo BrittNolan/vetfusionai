@@ -24,9 +24,23 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu on Escape and lock body scroll while it's open.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${
         scrolled || open
           ? "border-b border-line bg-paper/90 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
@@ -60,7 +74,7 @@ export function SiteNav() {
             href="/#contact"
             className="inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 text-[0.85rem] font-semibold text-paper transition duration-200 hover:bg-pine-deep active:scale-[0.97]"
           >
-            Set Up Your Records Workflow
+            Set up your records workflow
           </Link>
         </div>
 
@@ -68,6 +82,7 @@ export function SiteNav() {
           type="button"
           className="flex size-11 flex-col items-center justify-center gap-1.5 transition active:scale-95 lg:hidden"
           aria-expanded={open}
+          aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -86,6 +101,7 @@ export function SiteNav() {
 
       {open && (
         <nav
+          id="mobile-menu"
           aria-label="Mobile"
           className="border-t border-line bg-paper px-5 pt-2 pb-6 lg:hidden"
         >
@@ -95,25 +111,28 @@ export function SiteNav() {
                 <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3.5 font-medium text-ink/80"
+                  className="block py-3.5 font-medium text-ink/80 active:text-pine"
                 >
                   {l.label}
                 </Link>
               </li>
             ))}
+            <li className="border-b border-line/70">
+              <a
+                href="https://app.vetfusion.ai/login"
+                onClick={() => setOpen(false)}
+                className="block py-3.5 font-medium text-ink/80 active:text-pine"
+              >
+                Log in
+              </a>
+            </li>
           </ul>
-          <a
-            href="https://app.vetfusion.ai/login"
-            className="block border-b border-line/70 py-3.5 font-medium text-ink/80"
-          >
-            Log in
-          </a>
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
             className="mt-5 flex items-center justify-center rounded-full bg-pine px-5 py-3 font-semibold text-paper transition active:scale-[0.98]"
           >
-            Set Up Your Records Workflow
+            Set up your records workflow
           </Link>
         </nav>
       )}

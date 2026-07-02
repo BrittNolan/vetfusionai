@@ -11,6 +11,7 @@ export default function DashboardPage() {
   return (
     <PlatformPage
       route="/dashboard"
+      illustration="/illustrations/dashboard.webp"
       title="Dashboard"
       description="Operational visibility for medical, inventory, business operations, risk, and continuity workflows — the leadership view of everything the care system depends on."
       capabilities={[

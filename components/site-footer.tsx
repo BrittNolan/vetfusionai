@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/ui";
-
-const platformLinks = [
-  { href: "/soap", label: "/soap" },
-  { href: "/tracker", label: "/tracker" },
-  { href: "/import", label: "/import" },
-  { href: "/timeline", label: "/timeline" },
-  { href: "/dashboard", label: "/dashboard" },
-];
+import { platformTools } from "@/lib/platform-tools";
 
 const siteLinks = [
   { href: "/#how-it-works", label: "How it works" },
@@ -24,16 +17,18 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)]">
           <div>
-            <Wordmark />
+            <Link href="/" aria-label="VetFusion home" className="inline-block">
+              <Wordmark />
+            </Link>
             <p className="mt-4 max-w-sm text-[0.95rem] leading-relaxed text-moss">
               AI-assisted veterinary records, SOAPs, and care-continuity
               workflows for animal hospitals, rescues, shelters, and
               sanctuaries. One setup. Launch support included.
             </p>
-            <p className="mt-6 font-mono text-xs tracking-wide text-moss">
+            <p className="mt-6 text-[0.9rem] tracking-wide text-moss">
               <Link
                 href="/#contact"
-                className="underline-offset-4 hover:text-pine hover:underline"
+                className="font-medium underline-offset-4 hover:text-pine hover:underline"
               >
                 Contact us →
               </Link>
@@ -49,7 +44,7 @@ export function SiteFooter() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="inline-block py-1 text-[0.92rem] text-ink/70 transition-colors hover:text-pine"
+                    className="inline-block py-2.5 text-[0.92rem] text-ink/70 transition-colors hover:text-pine"
                   >
                     {l.label}
                   </Link>
@@ -63,13 +58,16 @@ export function SiteFooter() {
               Platform
             </p>
             <ul className="mt-4 space-y-2.5">
-              {platformLinks.map((l) => (
-                <li key={l.href}>
+              {platformTools.map((t) => (
+                <li key={t.route}>
                   <Link
-                    href={l.href}
-                    className="inline-block py-1 font-mono text-[0.85rem] text-ink/70 transition-colors hover:text-pine"
+                    href={t.route}
+                    className="group inline-flex items-baseline gap-2 py-2.5 text-[0.9rem] text-ink/70 transition-colors hover:text-pine"
                   >
-                    {l.label}
+                    {t.title}
+                    <span className="font-mono text-[0.72rem] text-ink/35 group-hover:text-pine/60">
+                      {t.route}
+                    </span>
                   </Link>
                 </li>
               ))}

@@ -54,7 +54,7 @@ function OpsColumn({
       <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-copper">
         {label}
       </p>
-      <h3 className="mt-3 font-display text-[1.7rem] font-medium tracking-tight text-ink">
+      <h3 className="mt-3 font-display text-2xl font-medium tracking-tight text-ink">
         {heading}
       </h3>
       <p className="mt-3 text-[0.92rem] leading-relaxed text-moss">{blurb}</p>
@@ -75,7 +75,7 @@ function OpsColumn({
 export function Operations() {
   return (
     <section className="border-t border-line">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <SectionHeading
           index="09"
           eyebrow="Operations continuity"
@@ -89,7 +89,7 @@ export function Operations() {
           lede="Once the records workflow is working, VetFusion can expand into the continuity layer around it — so the things care depends on stay visible before they become blockers."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-14 lg:grid-cols-2">
           <OpsColumn
             label="Inventory & supply"
             heading="Inventory & supply continuity"

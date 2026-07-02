@@ -9,11 +9,13 @@ function MockTreatmentSheet() {
   ];
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-parchment shadow-card">
-      <div className="flex items-center justify-between border-b border-line bg-cream/60 px-5 py-3">
-        <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
+      <div className="flex items-start justify-between gap-3 border-b border-line bg-cream/60 px-5 py-3">
+        <p className="min-w-0 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
           Treatment sheet · “Maple” · feline
         </p>
-        <span className="font-mono text-[0.58rem] uppercase text-moss">Day 3/5</span>
+        <span className="shrink-0 font-mono text-[0.58rem] whitespace-nowrap uppercase text-moss">
+          Day 3/5
+        </span>
       </div>
       <div className="px-5">
         {rows.map((r) => (
@@ -47,11 +49,13 @@ function MockIcuBoard() {
   ];
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-parchment shadow-card">
-      <div className="flex items-center justify-between border-b border-line bg-cream/60 px-5 py-3">
-        <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
+      <div className="flex items-start justify-between gap-3 border-b border-line bg-cream/60 px-5 py-3">
+        <p className="min-w-0 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-moss">
           ICU / hospitalized board · AM rounds
         </p>
-        <span className="font-mono text-[0.58rem] uppercase text-moss">3 active</span>
+        <span className="shrink-0 font-mono text-[0.58rem] whitespace-nowrap uppercase text-moss">
+          3 active
+        </span>
       </div>
       <div className="divide-y divide-line/60">
         {patients.map((p) => (
@@ -93,7 +97,9 @@ function MockMedTracker() {
       <div className="grid grid-cols-2 gap-px bg-line/60">
         {meds.map((m) => (
           <div key={m.label} className="bg-parchment px-5 py-4">
-            <p className={`font-display text-2xl font-medium ${m.tone}`}>{m.value}</p>
+            <p className={`font-display text-2xl font-medium tabular-nums ${m.tone}`}>
+              {m.value}
+            </p>
             <p className="mt-0.5 font-mono text-[0.58rem] uppercase tracking-wider text-moss">
               {m.label}
             </p>
@@ -128,7 +134,7 @@ const blocks = [
 export function Continuity() {
   return (
     <section className="border-t border-line">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <SectionHeading
           index="07"
           eyebrow="Clinical continuity"
@@ -141,13 +147,12 @@ export function Continuity() {
           lede="A SOAP draft is only useful if it leads to review, approval, treatment follow-through, and a finalized record. VetFusion connects record generation to the daily work."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-14 lg:grid-cols-3">
           {blocks.map((block) => (
             <div
               key={block.title}
-              className="reveal flex flex-col gap-6 rounded-2xl border border-line bg-paper p-6 shadow-card sm:p-7"
+              className="reveal flex h-full flex-col gap-6 rounded-2xl border border-line bg-paper p-6 shadow-card sm:p-7"
             >
-              {block.mock}
               <div>
                 <h3 className="font-display text-[1.45rem] font-medium tracking-tight text-ink">
                   {block.title}
@@ -155,6 +160,9 @@ export function Continuity() {
                 <p className="mt-2.5 text-[0.9rem] leading-relaxed text-moss">
                   {block.body}
                 </p>
+              </div>
+              <div aria-hidden className="mt-auto">
+                {block.mock}
               </div>
             </div>
           ))}

@@ -36,22 +36,20 @@ const steps = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="border-t border-line bg-parchment/60">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading
-            index="06"
-            eyebrow="How it works"
-            title={
-              <>
-                AI drafts.{" "}
-                <em className="text-pine italic">Veterinarians decide.</em>
-              </>
-            }
-            lede="Every workflow VetFusion sets up is human-in-the-loop and veterinarian-controlled — from first note to finalized record to daily follow-through."
-          />
-        </div>
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
+        <SectionHeading
+          index="06"
+          eyebrow="How it works"
+          title={
+            <>
+              AI drafts.{" "}
+              <em className="text-pine italic">Veterinarians decide.</em>
+            </>
+          }
+          lede="Every workflow VetFusion sets up is human-in-the-loop and veterinarian-controlled — from first note to finalized record to daily follow-through."
+        />
 
-        <ol className="reveal mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ol className="reveal mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
           {steps.map((step, i) => {
             const isDvm = step.who === "DVM";
             return (
@@ -68,7 +66,7 @@ export function HowItWorks() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span
-                    className={`rounded-full px-2.5 py-1 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${
+                    className={`rounded-full px-2.5 py-1 font-mono text-[0.62rem] font-semibold uppercase tracking-wider ${
                       isDvm
                         ? "bg-pine text-paper"
                         : "border border-ink/15 text-moss"
@@ -88,7 +86,7 @@ export function HowItWorks() {
           })}
         </ol>
 
-        <p className="reveal mt-10 text-center font-mono text-[0.72rem] tracking-wide text-moss">
+        <p className="reveal mx-auto mt-8 max-w-2xl rounded-xl border border-line bg-paper px-5 py-4 text-center font-mono text-[0.72rem] leading-relaxed tracking-wide text-moss lg:mt-12">
           AI never independently diagnoses, prescribes, interprets imaging,
           approves treatment, or finalizes the medical record.
         </p>

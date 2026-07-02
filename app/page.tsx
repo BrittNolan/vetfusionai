@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="main-content">
         <Hero />
         <Bottleneck />
         <TimeSavings />

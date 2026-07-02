@@ -1,20 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 const fieldClass =
-  "w-full rounded-lg border border-paper/20 bg-paper/10 px-4 py-3 text-[0.95rem] text-paper placeholder:text-paper/40 outline-none transition focus:border-copper-soft focus:bg-paper/15";
+  "w-full rounded-lg border border-paper/20 bg-paper/10 px-4 py-3 text-[0.95rem] text-paper placeholder:text-paper/60 transition focus:border-copper-soft focus:bg-paper/15";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // Move focus to the confirmation so screen-reader and keyboard users land on it.
+  useEffect(() => {
+    if (status === "sent") successRef.current?.focus();
+  }, [status]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    setStatus("sending");
     setError("");
 
     const payload = {
@@ -25,6 +30,20 @@ export function ContactForm() {
       // honeypot — bots fill this; humans never see it
       company_website: (form.elements.namedItem("company_website") as HTMLInputElement).value,
     };
+
+    // Voiced client-side checks (noValidate suppresses the native prompts).
+    if (!payload.name.trim() || !payload.email.trim() || !payload.message.trim()) {
+      setError("Please add your name, email, and a short message so we can reply.");
+      setStatus("error");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      setError("That email doesn’t look right — mind double-checking it?");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("sending");
 
     try {
       const res = await fetch("/api/contact", {
@@ -48,7 +67,12 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="reveal mx-auto mt-10 max-w-xl rounded-2xl border border-paper/15 bg-paper/5 p-8 text-center">
+      <div
+        ref={successRef}
+        role="status"
+        tabIndex={-1}
+        className="reveal mx-auto mt-10 max-w-xl rounded-2xl border border-paper/15 bg-paper/5 p-8 text-center outline-none"
+      >
         <p className="font-display text-2xl font-medium text-paper">
           Thank you — we&rsquo;ll be in touch.
         </p>
@@ -106,7 +130,7 @@ export function ContactForm() {
           name="org"
           type="text"
           autoComplete="organization"
-          placeholder="Practice, rescue, shelter, or sanctuary (optional)"
+          placeholder="Practice, rescue, or sanctuary (optional)"
           className={fieldClass}
         />
       </div>
@@ -147,12 +171,12 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center justify-center rounded-full bg-copper px-7 py-3 text-[0.9rem] font-semibold text-paper transition duration-200 hover:bg-copper-soft active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex w-full items-center justify-center rounded-full bg-copper px-7 py-3 text-[0.9rem] font-semibold text-paper transition duration-200 hover:bg-copper-deep active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
         >
           {status === "sending" ? "Sending…" : "Request a setup conversation"}
         </button>
       </div>
-      <p className="mt-4 text-center font-mono text-[0.7rem] tracking-wide text-paper/55">
+      <p className="mt-4 text-center font-mono text-[0.78rem] tracking-wide text-paper/75">
         We&rsquo;ll reply by email — no spam, ever.
       </p>
     </form>

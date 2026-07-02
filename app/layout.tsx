@@ -51,6 +51,12 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${instrumentSans.variable} ${plexMono.variable} antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-pine focus:px-4 focus:py-2 focus:text-[0.9rem] focus:font-semibold focus:text-paper focus:shadow-lift"
+        >
+          Skip to content
+        </a>
         {children}
       </body>
     </html>

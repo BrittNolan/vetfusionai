@@ -21,7 +21,7 @@ const steps = [
 export function SetupModel() {
   return (
     <section className="border-t border-line bg-cream/50">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             index="03"
@@ -32,14 +32,14 @@ export function SetupModel() {
                 <em className="text-pine italic">monthly subscription</em>.
               </>
             }
-            lede="One setup. Launch support included. Optional renewal when your team wants more help. VetFusion is built around implementation — not another subscription your team cannot escape."
+            lede="Launch support is included, with optional renewal when your team wants more help — VetFusion is built around implementation, not another subscription you can't escape."
           />
           <div className="reveal shrink-0">
             <Stamp className="rotate-2 text-copper">No required monthly scribe fee</Stamp>
           </div>
         </div>
 
-        <div className="reveal mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line shadow-card md:grid-cols-3">
+        <div className="reveal mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line shadow-card md:grid-cols-3 lg:mt-14">
           {steps.map((step) => (
             <div key={step.n} className="bg-paper p-8 sm:p-10">
               <p className="font-mono text-[0.7rem] font-medium tracking-[0.2em] text-copper">
@@ -55,11 +55,11 @@ export function SetupModel() {
           ))}
         </div>
 
-        <p className="reveal mx-auto mt-12 max-w-3xl text-center font-display text-xl leading-relaxed text-ink/80 italic sm:text-2xl">
+        <blockquote className="reveal mx-auto mt-10 max-w-3xl text-center font-display text-xl leading-relaxed text-ink/80 italic lg:mt-12 sm:text-2xl">
           “AI scribe tools help generate notes. VetFusion helps the team set up
           the records workflow, train safely, connect the outputs to treatment
           follow-through, and keep the whole care system reviewable.”
-        </p>
+        </blockquote>
       </div>
     </section>
   );

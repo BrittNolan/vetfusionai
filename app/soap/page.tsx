@@ -11,6 +11,7 @@ export default function SoapPage() {
   return (
     <PlatformPage
       route="/soap"
+      illustration="/illustrations/soap.webp"
       title="SOAP workspace"
       description="AI-assisted draft structure, medical-record review, and finalization workflow — built so drafts move through quality checks and DVM review into clean, finalized records."
       capabilities={[
