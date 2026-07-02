@@ -58,23 +58,23 @@ export function TimeSavings() {
           </div>
 
           <div className="reveal flex flex-col gap-6">
-            {/* Founder stat */}
+            {/* Field result stat */}
             <div className="relative overflow-hidden rounded-2xl bg-pine-deep p-8 text-paper sm:p-10">
               <div
                 aria-hidden
                 className="pointer-events-none absolute -top-20 -right-20 size-64 rounded-full bg-pine-soft/40 blur-3xl"
               />
               <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-copper-soft">
-                Founder result
+                Field result
               </p>
               <p className="mt-4 font-display text-6xl font-medium tracking-tight sm:text-7xl">
                 ~5 <span className="text-4xl sm:text-5xl">hrs/day</span>
               </p>
               <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-paper/75">
-                Record time saved in the founder’s own AI-assisted records
-                workflow — while improving the quality, structure, and
-                reviewability of the records. A real-world origin story, not a
-                universal guarantee.
+                Record time saved in a real-world, high-volume AI-assisted
+                records workflow — while improving the quality, structure,
+                and reviewability of the records. A real operational result,
+                not a universal guarantee.
               </p>
               <p className="mt-5 border-t border-paper/15 pt-4 font-mono text-[0.7rem] leading-relaxed tracking-wide text-paper/60">
                 During setup, we establish your baseline so your team can

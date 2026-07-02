@@ -248,7 +248,7 @@ export function Hero() {
             {
               stat: "~5 hrs/day",
               label:
-                "record time saved in founder use — your baseline is measured during setup",
+                "record time saved in real-world, high-volume use — your baseline is measured during setup",
             },
             {
               stat: "One setup",

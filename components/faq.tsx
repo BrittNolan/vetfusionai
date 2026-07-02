@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     q: "How much time can VetFusion save?",
-    a: "Time savings depends on the workflow, case volume, staff adoption, and review process. In founder use, this type of workflow has saved up to about five hours per day in records while improving record quality. VetFusion can help measure your baseline and build a workflow designed to reduce record burden.",
+    a: "Time savings depends on the workflow, case volume, staff adoption, and review process. In real-world, high-volume use, this type of workflow has saved up to about five hours per day in records while improving record quality. VetFusion can help measure your baseline and build a workflow designed to reduce record burden.",
   },
   {
     q: "Is VetFusion another monthly AI scribe subscription?",

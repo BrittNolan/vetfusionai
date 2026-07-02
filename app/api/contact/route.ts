@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 // Where inquiries land + the verified Resend sender. Configurable via env so
-// the address can change without a code edit. Ryan's email is NEVER exposed to
-// the browser — it only lives server-side here.
+// the address can change without a code edit. The inbox address is NEVER
+// exposed to the browser — it only lives server-side here.
 const TO = process.env.CONTACT_TO || "rwhitney@vetfusionai.com";
 const FROM = process.env.RESEND_FROM || "VetFusion <noreply@vetfusion.ai>";
 

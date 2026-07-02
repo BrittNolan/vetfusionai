@@ -1,3 +1,4 @@
+import { About } from "@/components/about";
 import { Boundaries } from "@/components/boundaries";
 import { Bottleneck } from "@/components/bottleneck";
 import { Continuity } from "@/components/continuity";
@@ -5,7 +6,6 @@ import { Deliverables } from "@/components/deliverables";
 import { Diagnostics } from "@/components/diagnostics";
 import { Faq } from "@/components/faq";
 import { FinalCta } from "@/components/final-cta";
-import { Founder } from "@/components/founder";
 import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 import { Operations } from "@/components/operations";
@@ -34,7 +34,7 @@ export default function Home() {
         <Platform />
         <Boundaries />
         <Faq />
-        <Founder />
+        <About />
         <FinalCta />
       </main>
       <SiteFooter />
